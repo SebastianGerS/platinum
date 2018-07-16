@@ -1,0 +1,14 @@
+version: '2'
+
+services:
+  react_client:
+    volumes:
+      - app-sync:/home/node/app:nocopy
+  express_api:
+    volumes:
+      - api-sync:/home/node/app:nocopy
+volumes:
+  app-sync:
+    external: true
+  api-sync:
+    external: true
